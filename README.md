@@ -20,7 +20,7 @@ Results from Not Optimized but Scaled:
 - SVR: Train 80% of data score :0.84677434 || Test 20% of data score : 0.84198605
 - RF: Train 80% of data score :0.97664131 || Test 20% of data score : 0.97675108
 
-Results from Optimized with Outliers:
+Results from Optimized with Outliers Present:
 - LR: Train 80% of data score :0.851551417 || Test 20% of data score : 0.849371568
 - SVR: Train 80% of data score :0.85150283 || Test 20% of data score : 0.84926877
 - RF: Train 80% of data score :0.89365762 || Test 20% of data score : 0.8430198
