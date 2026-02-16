@@ -37,7 +37,7 @@ Model Selection:
 
 Deployment:
 - The LR model from the ‘Optimized with Outliers’ experiment was packaged into a Flask app and deployed using ngrok.
-- Ngrok: Created a secure public URL for real-time predictions without needing a full cloud deployment.
+- Ngrok created a secure public URL for real-time predictions without needing a full cloud deployment.
 
 Key Insights:
 - This project shows how preprocessing, scaling, and tuning affect model performance. High scores can be misleading if models aren’t tested independently, as with Random Forest.
