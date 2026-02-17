@@ -19,6 +19,7 @@ Results from Not Optimized but Scaled:
 - LR: Train 80% of data score :0.851551417 || Test 20% of data score : 0.849371568
 - SVR: Train 80% of data score :0.84677434 || Test 20% of data score : 0.84198605
 - RF: Train 80% of data score :0.97664131 || Test 20% of data score : 0.97675108
+- The features of Linear Regression and SVR were scaled, but RF's features weren't scaled, yet RF’s test score jumped unrealistically. This does not reflect RF’s true predictive ability.
 
 Results from Optimized with Outliers Present:
 - LR: Train 80% of data score :0.851551417 || Test 20% of data score : 0.849371568
@@ -31,7 +32,7 @@ Results from Optimized with Outliers Removed:
 - RF: Train 80% of data score :0.89270446 || Test 20% of data score : 0.83959093
 
 Model Selection:
-- Based on the results, the Random Forest model from the “Not Optimized but Scaled” experiment initially appears to be the best-performing model due to its high score. However, this performance is misleading. When Random Forest is isolated and evaluated on its own, the accuracy drops, revealing that the apparent improvement was a facade caused by interactions with the other scaled models in the evaluation pipeline.
+- Based on the results, the Random Forest model from the “Not Optimized but Scaled” experiment appears to be the best-performing model due to its high score. This misleading performance was caused by interactions with the other scaled models in the evaluation pipeline.
 - This highlights an important point in model evaluation: a model’s high performance within a combined or comparative framework does not always reflect its true standalone predictive power. It underscores the need to test each model independently to validate real performance before concluding it is superior.
 -The LR model from the ‘Optimized with Outliers’ experiment was ultimately selected for deployment because of its high accuracy, hyperparameter tuning, and deployability.
 
@@ -40,7 +41,8 @@ Deployment:
 - Ngrok created a secure public URL for real-time predictions without needing a full cloud deployment.
 
 Key Insights:
-- This project shows how preprocessing, scaling, and tuning affect model performance. High scores can be misleading if models aren’t tested independently, as with Random Forest.
+- This project shows how preprocessing, scaling, and tuning affect model performance.
+- When scaling models, exclude any model you don’t intend to scale from the ones being scaled. In the 'Not Optimized but Scaled' experiment, Linear Regression and SVR were scaled but RF was not, yet RF’s test score jumped unrealistically and gave a misleading impression of its true performance. 
 - Improvements from hyperparameter tuning or outlier removal don’t always guarantee the best model.
 
 
