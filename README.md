@@ -42,7 +42,8 @@ Deployment:
 
 Key Insights:
 - This project shows how preprocessing, scaling, and tuning affect model performance.
-- When scaling models, exclude any model you don’t intend to scale from the ones being scaled. In the 'Not Optimized but Scaled' experiment, Linear Regression and SVR were scaled but RF was not, yet RF’s test score jumped unrealistically and gave a misleading impression of its true performance. 
-- Improvements from hyperparameter tuning or outlier removal don’t always guarantee the best model.
+- When scaling models, exclude any model you don’t intend to scale from the ones being scaled. In the 'Not Optimized but Scaled' experiment, Linear Regression and SVR were scaled but RF was not, yet RF’s test score jumped unrealistically and gave a misleading impression of its true performance.
+- While scaling Logistic Regression and SVC together produces the same outcome as scaling them individually, it is safer to scale each model separately. This prevents unintended interactions with other models and ensures a more accurate assessment of performance.
+- Hyperparameter tuning and outlier removal don't always guarantee an improvement in model accuracy, as seen with SVR and RF.
 
 
