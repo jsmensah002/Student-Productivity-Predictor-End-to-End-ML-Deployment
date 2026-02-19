@@ -27,6 +27,7 @@ Results from Optimized with Outliers Present:
 - RF: Train 80% of data score :0.89365762 || Test 20% of data score : 0.8430198
 
 Results from Optimized with Outliers Removed:
+- Outlier removal reduced the dataset by 5.63%.
 - LR: Train 80% of data score :0.851551417 || Test 20% of data score : 0.849371568
 - SVR: Train 80% of data score :0.84768429 || Test 20% of data score : 0.84762372
 - RF: Train 80% of data score :0.89270446 || Test 20% of data score : 0.83959093
