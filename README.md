@@ -38,8 +38,7 @@ Model Selection:
 -The LR model from the ‘Optimized with Outliers’ experiment was ultimately selected for deployment because of its high accuracy, hyperparameter tuning, and deployability.
 
 Deployment:
-- The LR model from the ‘Optimized with Outliers’ experiment was packaged into a Flask app and deployed using ngrok.
-- Ngrok created a secure public URL for real-time predictions without needing a full cloud deployment.
+- The LR model from the ‘Optimized with Outliers’ experiment was packaged into a Flask app and deployed to AWS using EC2. 
 
 Key Insights:
 - This project shows how preprocessing, scaling, and tuning affect model performance.
